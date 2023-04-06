@@ -21,3 +21,4 @@
   - [Singleton01.py](./Singleton/Singleton01.py)
   - [Singleton02.js](./Singleton/Singleton02.js)
   - [Carrinho.py](./Singleton/Carrinho.py)
+  - [Carrinho.js](./Singleton/Carrinho.js)
