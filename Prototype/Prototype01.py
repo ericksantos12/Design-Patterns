@@ -27,19 +27,23 @@ class PessoaManager:
     def get_pessoa(self, id):
         return self.pessoas[id].clone() # Usa o método clone da classe Pessoa
   
-def menu():
-    return int(input('''
-Sistema de Cadastro:
-1 -- Cadastrar pessoa
-2 -- Listar pessoa
-0 -- Sair
-> '''))
+def get_menu_choice() -> int:
+    menu_options = [
+        "Sistema de Cadastro:",
+        "1 -- Cadastrar pessoa",
+        "2 -- Listar pessoa",
+        "0 -- Sair",
+        "> "
+    ]
+    menu_text = "\n".join(menu_options)
+    return int(input(menu_text))
+
   
 def main():
     manager = PessoaManager()
     
     while True:
-        key = menu()
+        key = get_menu_choice()
         match key:
             case 1:
                 manager.add_pessoa(input('Nome: '), input('Idade: '), input('Id: '))
